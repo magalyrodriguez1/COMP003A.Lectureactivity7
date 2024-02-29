@@ -69,7 +69,16 @@ namespace COMP003A.Lectureactivity7
 
             Console.WriteLine($"Count of alphabet: {alphabet.Count}"); //displays the count/size of the list; output: 5
 
+            //similar to arrays, you can use the syntax below: 
+            //listName[indexNumber] to access a specific content in the collection 
+            Console.WriteLine($"alphabet[0]: {alphabet[0]}");
+            Console.WriteLine($"alphabet[2]: {alphabet[2]}");
+            Console.WriteLine($"alpabet[4]: {alphabet[4]}");
 
+            alphabet.Remove('C'); //removes a specific value somewhere inside a collection
+            Console.WriteLine("\nContents of alphabet after removing 'C':");
+            ListTraversal(alphabet);
         }
+        
     }
 }
