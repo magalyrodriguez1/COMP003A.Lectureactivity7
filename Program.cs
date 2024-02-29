@@ -79,6 +79,68 @@ namespace COMP003A.Lectureactivity7
             Console.WriteLine("\nContents of alphabet after removing 'C':");
             ListTraversal(alphabet);
         }
-        
+        ///<summary>
+        ///Section separator method
+        ///</summary>
+        ///<param name="section">string input for section name</param>
+        static void SectionSeparator(string section)
+        {
+            Console.WriteLine("".PadRight(50, '*') + $"\n\n\n{section} Section\n" + "".PadRight(50, '*'));
+        }
+
+        ///<summary>
+        ///Array traversal
+        ///</summary>
+        ///<param name="array">Integer array to traverse</param>
+        static void ArrayTraversal(int[] array)
+        {
+            //you can use a for-loop or other looping statements for array traversale
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine($"Array at index{i}: {array[i]}");
+            }
+        }
+        ///<summary>
+        ///Array traversal
+        ///</summary>
+        ///<param name="array">string input</param>
+        static void ArrayTraversal(string array)
+        {
+            //you can use a for-loop or other looping statements for array traversals
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine($"Array at index {i}: {array[i]}");
+            }
+        }
+            ///<summary>
+            ///Average grade calculator
+            ///</summary>
+            ///<param name="array">Integer array input</param>
+            ///<returns>the average</returns>
+            static double GetAverage(int[] array)
+            {
+                int runningTotal = 0;
+                //if you are not planning to manipulate the contents of the array, you can use a foreach loop
+                foreach (int item in array)
+                {
+                    runningTotal += item; //adds the value of the current item to the runningTotal
+                }
+                return runningTotal / array.Length; //returns the average
+            }
+
+            ///<summary>
+            ///List traversal using a foreach loop
+            ///</summary>
+            ///<param name="list">Character list input</param>
+            static void ListTraversal(List<char> list)
+            {
+                //you can use a for-each loop or other looping statements for list traversale
+                foreach (var item in list)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
     }
-}
+
+
