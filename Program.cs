@@ -34,7 +34,42 @@ namespace COMP003A.Lectureactivity7
              * int[] array2 = new int[] {1,3,5,7,9};
              * array2[0] -> returns 1
              * array2[1] -> returns 3
-             * array2[2]
+             * array2[2] -> returns 5
+             * array2[3] -> returns 7
+             * array2[4] -> returns 9
+             * array[2]5 -> RUNTIME ERROR: OutOfBoundsException
+             * 
+             * It is important to note that arrays cannot be dynamically resized. They are
+             * stored in sequential blocks of memory, making it extremeley fast to access them.
+             * also you will get a runtime error of OutOfBoundsException when accessing an index that 
+             * does not exist
+             */
+            Console.WriteLine("array2 Traversal");
+            ArrayTraversal(array2);
+
+            //integer array traversal
+            int[] grades = new int[] { 100, 85, 92, 87, 91, 78, 89 };
+            Console.WriteLine($"\ngrades Average: {GetAverage(grades)}");
+
+            //string array traversal 
+            Console.WriteLine("\nstring Traversal");
+            //strings are special objects consisting of an array of characters
+            string message = "hello";
+            ArrayTraversal(message);
+
+            SectionSeparator("Lists");
+            //like arrays, lists store a collection of data with the same type (e.g., int, string, onjects, etc)
+            //unlike arrays, lists are dynamic and can increase/decrease in size.
+            List<char> alphabet = new List<char>(); //declare an empty integer List
+            alphabet.Add('A'); //adds the character at the end of the collection
+            alphabet.Add('B'); //adds the character at the end of the collection
+            alphabet.Add('C'); //adds the character at the end of the collection
+            alphabet.Add('D'); //adds the character at the end of the collection
+            alphabet.Add('E'); //adds the character at the end of the collection
+
+            Console.WriteLine($"Count of alphabet: {alphabet.Count}"); //displays the count/size of the list; output: 5
+
+
         }
     }
 }
